@@ -51,6 +51,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <!-- jaxb-runtime solo lo usa Hibernate para mapeos XML (orm.xml/hbm.xml), que este ms no tiene.
+                 Se excluye por CVE-2026-92877 (XXE en jaxb-core, sin version corregida publicada). -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.glassfish.jaxb</groupId>
+                    <artifactId>jaxb-runtime</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
