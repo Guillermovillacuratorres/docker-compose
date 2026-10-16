@@ -112,7 +112,7 @@ jobs:
         run: |
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
             -Dsonar.projectKey=Guillermovillacuratorres_docker-compose \
-            -Dsonar.organization=Guillermovillacuratorres \
+            -Dsonar.organization=guillermovillacuratorres \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=${SONAR_TOKEN}
 
